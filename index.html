@@ -44,9 +44,31 @@
                         - x2 => point d'arrivée sur x
                         - y1 => point de départ sur y
                         - y2 => point d'arrivée sur y
-                - attention : il faut donner une couleur à la ligne !
+                - ! attention : il faut donner une couleur à la ligne !
             -->
             <line x1="10" y1="110" x2="80" y2="150" stroke="orange"/>
+                        
+            <!-- balise permettant de générer un TRACE : 
+                - points => valeur x et valeur y
+                    l'idée est de placer plusieurs points pour réaliser un tracé
+                - ! attention => la forme va chercher à se refermer et du coup se "remplir" d'un fond,
+                                    pour éviter cela : fill = "transparent"
+            -->
+            <polyline points="60 110 65 120 70 125 70 130 10 250" stroke="red" fill="transparent"/>
+
+            <!-- balise permettant de générer un POLYGON :
+                - il s'agit d'une forme qui se referme systèmatiquement
+            -->
+            <polygon points="50 100 35 120 70 125" stroke="blue"/>
+
+            <!-- balise permettant de générer un CHEMIN :
+                - d => prend des valeurs pour réaliser un tracer particulier
+                        exemple :
+                            - M => move to
+                            - Q => courbe de bézier
+                            - C => courbe
+            -->
+            <path d="M20,230 Q40,205 50,230 T90,230" fill="transparent" stroke="blue" stroke-width="5">
         </svg>
     </body>
 </html>
