@@ -7,6 +7,46 @@
         <title>Manipulations SVG</title>
     </head>
     <body>
-        
+        <!-- balise svg :
+            - xmlns => référence du svg utilisé
+            - version => version actuelle
+        -->
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="250">
+            
+            <!-- balise permettant de générer un RECTANGLE :
+                - x => position sur l'axe des x
+                - y => position sur l'axe des y
+                - stroke => contour 
+                - stroke-width => épaisseur du contour
+                - fill => remplir (ex: couleur/transparent)
+                - rx / ry => rayon
+            -->
+            <rect x="10" y="10" height="30" width="30" stroke="black" fill="transparent" stroke-width="5"/>
+            <rect x="60" y="10" rx="60" ry="10" height="30" width="30" stroke="red" fill="transparent" stroke-width="5"/>
+           
+            <!-- balise permettant de générer un CERCLE :
+                - cx => centre du cercle sur l'axe des x
+                - cy => centre du cercle sur l'axe des y
+                - r => rayon du cercle
+            -->
+            <circle cx="25" cy="75" r="20"/>
+
+            <!-- balise permettant de générer une ELLIPSE :
+                - rx => rayon axe des x
+                - ry => rayon axe des y
+            -->
+            <ellipse cx="75" cy="75" rx="20" ry="5"/>
+
+            <!-- balise permettant de générer une LIGNE :
+                - on définit les différents points de la ligne
+                    ex :
+                        - x1 => point de départ sur x
+                        - x2 => point d'arrivée sur x
+                        - y1 => point de départ sur y
+                        - y2 => point d'arrivée sur y
+                - attention : il faut donner une couleur à la ligne !
+            -->
+            <line x1="10" y1="110" x2="80" y2="150" stroke="orange"/>
+        </svg>
     </body>
 </html>
